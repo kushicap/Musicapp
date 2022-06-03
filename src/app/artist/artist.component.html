@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+
+      input[type="text"],
+      select,
+      textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+
+      input[type="submit"] {
+        background-color: #04aa6d;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+
+      .container {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+      }
+    </style>
+  </head>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .header {
+      overflow: hidden;
+      background-color:violet;
+      padding: 20px 10px;
+    }
+
+    .header a {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 25px;
+      border-radius: 4px;
+    }
+
+    .header a.logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    .header a:hover {
+      background-color: #ddd;
+      color: black;
+    }
+
+    .header a.active {
+      background-color: dodgerblue;
+      color: white;
+    }
+
+    .header-right {
+      float: right;
+    }
+
+    @media screen and (max-width: 500px) {
+      .header a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .header-right {
+        float: none;
+      }
+    }
+</style>
+
+<div class="header">
+  <a href="#default" class="logo">Welcome To Music App</a>
+  <div class="header-right">
+    <a routerLink="/signup" routerLinkActive="active">Signup</a>
+    <a routerLink="/album" routerLinkActive="active">Album</a>
+    <a routerLink="/contactus" routerLinkActive="active">Contact</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+  </div>
+</div>
+
+<br>
+
+<table class="table">
+
+  <thead>
+
+    <tr>
+
+      <th scope="col"> 
+        <img style="height: 8cm ; width: 95%;"
+        id="profile-img"
+        src="/assets/artist.jpg"
+        class="profile-img-card"/>
+
+      </th>
+
+      <th scope="col">
+         <img style=  "height: 8cm;;"
+        id="profile-img"
+        src="assets/music.jpg"
+        class="profile-img-card"/>
+      </th>
+        <th scope="col">
+          <img style=  "height: 8cm; width: 97%;"
+         id="profile-img"
+         src="assets/betterdays.jpg"
+         class="profile-img-card"/>
+        </th>
+         <th scope="col">
+          <img style=  "height: 8cm; width: 97%;"
+         id="profile-img"
+         src="/assets/third.jpg"
+         class="profile-img-card"/>
+        </th>
+
+
+
+    </tr>
+
+  </thead>
+
+  <tbody>
+  
+
+  <tr>
+    <th scope="row" *ngFor="let artist of artists">
+      Id: {{artist.id}} <br>
+      Artist Name: {{artist.artistname}} <br>
+      Gender: {{artist.gender}} </th> <br> 1.
+      </tr>
+     
+      <tr>
+        <th>1
+          <h6>Song Name:Cheap Thrills</h6>
+ <audio controls class="turn"> 
+  <source src="/assets/songs/Sia_ft_Sean_Paul_-_Cheap_Thrills_(thinknews.com.ng).mp3" type="audio/mpeg" margin="7px 0 0 0" top="0" >
+</audio></th> 
+<th>1
+  <h6>Song Name:How have you been</h6>
+<audio controls class="turn"> 
+<source src="/assets/songs/Broke in Summer - How Have You Been.mp3" type="audio/mpeg" margin="7px 0 0 0" top="0" >
+</audio></th> 
+<th>1. 
+  <h6>Song Name:Better</h6>
+<audio controls class="turn"> 
+<source src="/assets/songs/better.mp3" type="audio/mpeg" margin="7px 0 0 0" top="0" >
+</audio></th>
+<th>1
+    <h6>Song Name:Broken</h6>
+<audio controls class="turn"> 
+<source src="/assets/songs/Broken.mp3" type="audio/mpeg" margin="7px 0 0 0" top="0" >
+</audio></th>
+
+   </tr>
+
+    <tr>
+
+      <th scope="row"> 2
+        <h6>song Name:Lovely</h6>
+        <audio controls class="audios"> 
+          <source src="/assets/songs/Lovely.mp3" type="audio/mpeg" margin="7px 0 0 0" top="0" >
+       </audio></th>
+
+        <td> 2
+          <h6>song Name: Summer Began</h6>
+          <audio controls class="audios"> 
+          <source src="/assets/songs/Broke in Summer - Since That Summer Began.mp3" type="audio/mpeg" margin="7px 0 0 0" top="0" >
+       </audio>
+
+      </td>
+
+      <td> 2
+        <h6>song Name:Broken</h6>
+        <audio controls class="audios"> 
+        <source src="/assets/songs/Broken.mp3" type="audio/mpeg" margin="7px 0 0 0" top="0" >
+     </audio></td>
+     
+     <td> 2
+       <h6>song Name:Tech</h6>
+       <audio controls class="audios"> 
+      <source src="/assets/songs/tech.mp3" type="audio/mpeg" margin="7px 0 0 0" top="0" >
+   </audio></td>
+
+    </tr>
+
+    <tr>
+
+      <th scope="row">3
+        <h6>Song Name:Unstoppable</h6>
+     <audio controls class="audios"> 
+        <source src="/assets/songs/Sia_-_Unstoppable_(thinknews.com.ng).mp3" type="audio/mpeg" margin="7px 0 0 0" top="0" >
+     </audio></th>
+
+      <td>  3
+        <h6>Song Name:Broken in Summer</h6>
+        <audio controls class="audios"> 
+        <source src="/assets/songs/Broke in Summer - It's Been a While.mp3" type="audio/mpeg" margin="7px 0 0 0" top="0" >
+     </audio></td>
+      <td>  3
+        <h6>Song Name:Sunny</h6>
+        <audio controls class="audios"> 
+        <source src="/assets/songs/sunny.mp3" type="audio/mpeg" margin="7px 0 0 0" top="0" >
+     </audio></td>
+     <td>  3
+       <h6> Song Name: Cartoon</h6>
+       <audio controls class="audios">   
+      <source src="/assets/songs/cartoon.mp3" type="audio/mpeg" margin="7px 0 0 0" top="0" >
+   </audio></td>
+
+    </tr>
+   
+  </tbody>
+
+</table>
+
+  
+<footer>
+<h1>
+  Where words fail, music speaks.
+</h1>
+<p>
+ Music is the one-stop solution for all your music needs.This App offers you for free Access.
+</p>
+<P>  © Music.com 2022, All Rights Reserved </P>
+</footer>
+
+
+

@@ -1,0 +1,30 @@
+/* Clear floats after the columns */
+
+section::after {
+
+    content: "";
+  
+    display: table;
+  
+    clear: both;
+  
+  } 
+ 
+
+ th{
+  color:snow;
+} 
+td{
+  color:snow;
+} 
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+footer{
+  background-color:silver;
+    padding: 10px;
+    text-align: center;
+    color:royalblue;
+  }
+ 

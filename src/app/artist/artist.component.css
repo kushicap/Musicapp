@@ -1,0 +1,22 @@
+
+ th{
+    color:snow;
+  } 
+  td{
+    color:snow;
+    
+  } 
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 15px;
+  }
+  footer{
+    background-color:silver;
+      padding: 10px;
+      text-align: center;
+      color:royalblue;
+    }
+   

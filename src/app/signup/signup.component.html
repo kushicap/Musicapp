@@ -1,0 +1,140 @@
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+  
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  
+    .header {
+      overflow: hidden;
+      background-color:aqua;
+      padding: 20px 10px;
+    }
+  
+    .header a {
+      float: left;
+      color: black;
+      text-align: center;
+      padding: 12px;
+      text-decoration: none;
+      font-size: 18px;
+      line-height: 25px;
+      border-radius: 4px;
+    }
+  
+    .header a.logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+  
+    .header a:hover {
+      background-color:tan;
+      color: black;
+    }
+  
+    .header a.active {
+      background-color:lightpink;
+      color: white;
+    }
+  
+    .header-right {
+      float: right;
+    }
+  
+    @media screen and (max-width: 500px) {
+      .header a {
+        float: none;
+        display: block;
+        text-align: left;
+      }
+      .header-right {
+        float: none;
+      }
+    }
+  </style>
+ 
+  <div class="header">
+    <a href="#default" class="logo">Welcome To Music App</a>
+    <div class="header-right">
+      <a routerLink="/login" routerLinkActive="active"class="active" >Login</a>
+    
+      <a routerLink="/contactus" routerLinkActive="active">Contact</a>
+      <a routerLink="/about" routerLinkActive="active">About</a>
+    </div>
+  </div>
+  
+  <div class="formDiv">
+    <form [formGroup]="registrationForm" (ngSubmit)="register()">
+      <div class="mb-3">
+        <label for="username" class="form-label">First Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="username"
+          placeholder="enter first name"
+          name="username"
+          formControlName="username"
+        />
+        <span *ngIf="username&& username.invalid && username.touched">
+          First name should be minimum 6 character.
+        </span>
+      </div>
+  
+      <div class="mb-3">
+        <label for="pwd" class="form-label">Password</label>
+        <input
+          type="password"
+          class="form-control"
+          id="pwd"
+          placeholder="enter password"
+          name="password"
+          formControlName="password"
+        />
+        <span *ngIf="password && password.invalid && password.touched">
+          Password is required.
+        </span>
+      </div>
+      <br />
+      <button
+        type="submit" routerLink="/signup" routerLinkActive="active"
+        class="btn btn-primary form-control"
+        [disabled]="registrationForm.invalid"
+      >
+        Signup
+      </button>
+    </form>
+  </div>
+  
+  <footer>
+    <p>
+      © Music.com 2022, All Rights Reserved <br>
+    
+    </p>
+  </footer>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

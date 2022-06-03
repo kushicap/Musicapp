@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .header {
+        overflow: hidden;
+        background-color:teal;
+        padding: 20px 10px;
+      }
+
+      .header a {
+        float: left;
+        color: black;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 18px;
+        line-height: 25px;
+        border-radius: 4px;
+      }
+
+      .header a.logo {
+        font-size: 25px;
+        font-weight: bold;
+      }
+
+      .header a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .header a.active {
+        background-color: dodgerblue;
+        color: white;
+      }
+
+      .header-right {
+        float: right;
+      }
+
+      @media screen and (max-width: 500px) {
+        .header a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+        .header-right {
+          float: none;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="header">
+      <a href="#default" class="logo">Welcome To Music App</a>
+      <div class="header-right">
+        <a routerLink="/signup" routerLinkActive="active">Signup</a>
+        <a routerLink="/contactus" routerLinkActive="active">Contact</a>
+        <a routerLink="/about" routerLinkActive="active">About</a>
+      </div>
+    </div>
+
+    <h3>Contact Us</h3>
+
+    <div class="container">
+      
+      <form>
+        <img src="/assets/contact1.jpg" alt="" >
+        <label for="id"><h1>Id:</h1></label>
+        <h5>1234</h5>
+        <br />
+        <label for="name"><h1>Name: </h1>
+
+        </label>
+        <h5>Kushi</h5>
+        <br />
+
+        <label for="email"> <h1>Email:</h1>
+
+        </label>
+        <h5>Kushi@gmail.com</h5>
+        <br />
+        
+      </form>
+    </div>
+    <footer>
+      <p>
+        © Music.com 2022, All Rights Reserved <br>
+      
+      </p>
+    </footer>
+    
+  </body>
+</html>
+
